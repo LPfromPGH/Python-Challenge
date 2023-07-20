@@ -21,13 +21,17 @@ with open(bank_csv, encoding="utf_8") as csvfile:
 
     
 #Values for Variables
-    first_row=next(csv_reader)
-    prev_net = int(first_row[1])
+
     for row in csv_reader:
         time.append((row[0]))
         prof_loss=int(row[1])
         prof_losslist.append(prof_loss)
- #Finding the change and the greatest increase and decrease       
+
+    first_row=next(csv_reader)
+    prev_net = int(first_row[1])
+    for row in csv_reader:
+        
+        
         change=int(row[1])-prev_net
         prev_net=int(row[1])
         change_list.append(change)
@@ -37,10 +41,10 @@ with open(bank_csv, encoding="utf_8") as csvfile:
         if change<greatest_decrease[1]:
             greatest_decrease[1]=change
             greatest_decrease[0]=row[0]
-# Finding the total change and the average change        
+        
 total = sum(prof_losslist)
 average_change = sum(change_list)/len(change_list)
-# Write it to a file and put it on the screen
+
 with open('Finance_analysis.txt', 'w') as f:
     f.write("Financial Analysis")
     f.write('\n' "-------------------------------------------------------------------")
@@ -51,10 +55,10 @@ with open('Finance_analysis.txt', 'w') as f:
     f.write('\n' "Greatest Decrease:" + str(greatest_decrease))
 
 
-print("Financial Analysis")
-print("---------------------------------------------------------------------")
+print(f"Financial Analysis")
+print(f"---------------------------------------------------------------------")
 
-print("Total Months:  " + str(len(time) + 1))
+print(f"Total Months:  " + str(len(time) + 1))
 print("Total:  " + str(total))
 print("Average Change:  " + str(average_change))
 print("Greatest Increase" + str(greatest_increase))

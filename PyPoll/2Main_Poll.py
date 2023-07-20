@@ -20,7 +20,6 @@ radperc2 = 0
 candilist = []
 totvot = []
 
-#Reading the data
 with open(poll_csv, encoding="utf_8") as csvfile:
     csv_reader = csv.reader(csvfile, delimiter=",")
 
@@ -29,14 +28,26 @@ with open(poll_csv, encoding="utf_8") as csvfile:
     for row in csv_reader:
         totvot.append((row[0]))
         candilist.append((row[2]))
-#Tally the votes
+
+    #for row in candilist:
+     #       if (candilist == str("Charles Casper Stockham")):
+      ##     elif (candilist == str("Diana DeGette")):
+        #     totddg = (int(totddg + 1))
+         #   else:
+          #   totrad = (int(totrad + 1))
+#def vote(words):
+ ##      if word == ["charles casper stockham"]:
+   #         totccs = totccs + 1
+    #    if word == ["diana degette"]:
+     #       totddg = totddg + 1
+      #
     totccs = candilist.count("Charles Casper Stockham")
     totddg = candilist.count("Diana DeGette")
     totrad = candilist.count("Raymon Anthony Doane")
 
-#Total Votes
+
 totvot = (totccs + totddg + totrad)
-#Getting and rounding percentages
+
 ccsperc = (totccs/totvot) * 100 
 ddgperc = (totddg/totvot) * 100
 radperc = (totrad/totvot) * 100
@@ -44,7 +55,6 @@ ccsperc2 = round(ccsperc,3)
 ddgperc2 = round(ddgperc,3)
 radperc2 = round(radperc,3)
 
-#Declare the winner!
 if totccs > totddg and totccs > totrad:
     winner = str("Charles C Stockham")
 if totddg > totccs and totddg > totrad:
@@ -52,8 +62,6 @@ if totddg > totccs and totddg > totrad:
 if totrad > totccs and totrad > totddg:
     winner = str("Raymon Anthony Doane")
 
-
-#print it all out and put it in a file
 print("ELECTION RESULTS")
 print("-------------------------------------------------------------")
 
