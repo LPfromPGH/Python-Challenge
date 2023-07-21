@@ -18,7 +18,7 @@ I know the problem has to do with this section:
     first_row=next(csv_reader)"
 
 But everything I tried to remedy the issue broke the code and then nothing would work right. So I'll take the deduction, losing 5 points is better than losing all of them lol.
-Big shout out to Marc Calache, my tutor. He helped me fix my code so that Python would read my list as integers, and also helped me with the greatest increase/decrease part of my code.
+Big shout out to Marc Calache, my tutor. He helped me fix my code so that Python would read my list as integers, and also helped me with the greatest increase/decrease and average change part of my code.
 ![IMAGE DESCRIPTION](https://github.com/LPfromPGH/Python-Challenge/blob/main/Screenshot%202023-07-20%20Finance.png)
 
 PyPoll
