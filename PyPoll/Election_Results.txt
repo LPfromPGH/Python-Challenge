@@ -2,8 +2,8 @@ ELECTION RESULTS
 --------------------------------------------------------
 Total Votes    :369711
 --------------------------------------------------------
-Charles C Stockham:   0.0%(0)
-Diana DeGette:        0.0%(0)
-Raymon A Doane:       100.0%(369711)
+Charles C Stockham:   23.049%(85213)
+Diana DeGette:        73.812%(272892)
+Raymon A Doane:       3.139%(11606)
 --------------------------------------------------------
-WINNER!!    Raymon Anthony Doane
+WINNER!!    Diana DeGette

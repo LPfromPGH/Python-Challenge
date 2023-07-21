@@ -9,6 +9,7 @@ prof_losslist = []
 total = 0
 prof_loss = 0
 average_change = 0
+average_cut = 0
 change_list=[]
 greatest_increase = ["",-10000]
 greatest_decrease = ["",10000]
@@ -40,13 +41,14 @@ with open(bank_csv, encoding="utf_8") as csvfile:
 # Finding the total change and the average change        
 total = sum(prof_losslist)
 average_change = sum(change_list)/len(change_list)
+average_cut = round(average_change,2)
 # Write it to a file and put it on the screen
 with open('Finance_analysis.txt', 'w') as f:
     f.write("Financial Analysis")
     f.write('\n' "-------------------------------------------------------------------")
     f.write('\n' "Total Months:  " + str(len(time) + 1))
     f.write('\n' "Total:   " + str(total))
-    f.write('\n' "Average Change:  " + str(average_change))
+    f.write('\n' "Average Change:  " + "$" + str(average_cut))
     f.write('\n' "Greatest Increase:"  + str(greatest_increase))
     f.write('\n' "Greatest Decrease:" + str(greatest_decrease))
 
@@ -56,7 +58,7 @@ print("---------------------------------------------------------------------")
 
 print("Total Months:  " + str(len(time) + 1))
 print("Total:  " + str(total))
-print("Average Change:  " + str(average_change))
+print("Average Change:  " + "$" + str(average_cut))
 print("Greatest Increase" + str(greatest_increase))
 print("Greatest Decrease" + str(greatest_decrease))
 
