@@ -29,21 +29,22 @@ with open(poll_csv, encoding="utf_8") as csvfile:
         totvot.append((row[0]))
         candilist.append((row[2]))
 
-    #for row in candilist:
-     #       if (candilist == str("Charles Casper Stockham")):
-      ##     elif (candilist == str("Diana DeGette")):
-        #     totddg = (int(totddg + 1))
-         #   else:
-          #   totrad = (int(totrad + 1))
+    for row in candilist:
+            if (candilist is ("Charles Casper Stockham")):
+               totccs = (totccs + 1)
+            elif (candilist is ("Diana DeGette")):
+               totddg = (int(totddg + 1))
+            else:
+             totrad = (int(totrad + 1))
 #def vote(words):
  ##      if word == ["charles casper stockham"]:
    #         totccs = totccs + 1
     #    if word == ["diana degette"]:
      #       totddg = totddg + 1
       #
-    totccs = candilist.count("Charles Casper Stockham")
-    totddg = candilist.count("Diana DeGette")
-    totrad = candilist.count("Raymon Anthony Doane")
+   # totccs = candilist.count("Charles Casper Stockham")
+   # totddg = candilist.count("Diana DeGette")
+   # totrad = candilist.count("Raymon Anthony Doane")
 
 
 totvot = (totccs + totddg + totrad)
